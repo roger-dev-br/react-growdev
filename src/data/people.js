@@ -30,7 +30,7 @@ const lista = [{
     cargo: "Modelo",
     salario: 2500,
     imagem: "https://randomuser.me/api/portraits/women/77.jpg",
-    cor: "red",    
+    cor: "red",
 }];
 
 export default lista;
