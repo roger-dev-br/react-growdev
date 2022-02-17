@@ -27,10 +27,30 @@ export const Conteudo = styled.div`
 `;
 
 export const Nome = styled.h3`
-    color: #4CAF50;
+    color: ${props => props.corFonte || 'black'};
     font-weight: bold;
 `;
 
 export const Salario = styled.h4`
-   color: pink; 
+   color: ${props =>
+        props.valor < 2100
+            ? 'red'
+            : 'green'
+    }; 
 `;
+
+/*
+export const Salario = styled.h4`
+   color: ${props => avaliaSalario(props.valor)}; 
+`;
+
+function avaliaSalario(salario) {
+    if (salario < 2100) {
+        return 'red';
+    } else if (salario < 2600) {
+        return 'orange';
+    } else {
+        return 'green';
+    }
+}
+*/

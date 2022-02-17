@@ -1,13 +1,19 @@
 import { CardBody, Avatar, Conteudo, Nome, Salario } from "./style";
 
-export default function Card() {
+export default function Card({ pessoa }) {
+    function ajustaValor(valor) {
+        return valor.toFixed(2).replace(".", ",");
+    }
+
     return (
         <CardBody>
-            <Avatar src="http://roger.dev.br/img/avatar.3070f3de.jpg" alt="Avatar" />
+            <Avatar src={pessoa.imagem} alt={'Foto de ' + pessoa.nome} />
             <Conteudo>
-                <Nome>John Doe</Nome>
-                <p>Architect & Engineer</p>
-                <Salario>Salário: R$ 1000,00</Salario>
+                <Nome corFonte={pessoa.cor}>{pessoa.nome}</Nome>
+                <p>{pessoa.cargo}</p>
+                <Salario valor={pessoa.salario}>
+                    Salário: R$ {ajustaValor(pessoa.salario)}
+                </Salario>
             </Conteudo>
         </CardBody>
     );

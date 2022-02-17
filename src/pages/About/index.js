@@ -17,10 +17,7 @@ export default function About() {
             <br />
 
             <Card
-                nome={eu?.nome}
-                cargo={eu?.cargo}
-                imagem={eu?.imagem}
-                salario={eu?.salario}
+                pessoa={eu}
             />
         </div>
     );

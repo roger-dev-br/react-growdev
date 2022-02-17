@@ -9,7 +9,6 @@ const lista = [{
     cargo: "PO",
     salario: 2000,
     imagem: "https://randomuser.me/api/portraits/women/13.jpg",
-    cor: "#FF00FF",
 },
 {
     nome: "Luciara Cavalcanti",

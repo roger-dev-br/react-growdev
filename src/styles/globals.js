@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle `
+export default createGlobalStyle`
     body {
-        background-color: #CECECE;
+        background-color: red;
         font-family: 'Arial';
     }
-`
+`;
